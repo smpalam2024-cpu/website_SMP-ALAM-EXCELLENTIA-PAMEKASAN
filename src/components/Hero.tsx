@@ -1,7 +1,8 @@
 import React from 'react';
-import { Compass, Sparkles, ArrowRight, ShieldCheck, Award, MapPin, Users, Phone, Target } from 'lucide-react';
+import { Phone, ArrowRight, Target } from 'lucide-react';
 import { HERO_IMAGE, SCHOOL_INFO } from '../data/schoolData';
 import { useApp } from '../context/AppContext';
+import { HexagonalVault } from './HexagonalVault';
 
 interface HeroProps {
   onOpenRegister: () => void;
@@ -29,6 +30,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onExplore }) => {
         {/* Measured Contrast Scrims */}
         <div className="absolute inset-0 bg-gradient-to-b from-forest-950/85 via-forest-950/50 to-forest-950/95" />
         <div className="absolute inset-0 bg-radial-[at_top_right] from-amber-500/15 via-sky-500/10 to-transparent pointer-events-none" />
+        {/* Hexagonal Vault overlay — cursor-reactive grid */}
+        <HexagonalVault
+          className="absolute inset-0 w-full h-full"
+          hexColor="rgba(52, 211, 153, 0.18)"
+          glowColor="rgba(250, 204, 21, 0.60)"
+          glowRadius={200}
+          maxOpacity={0.85}
+          cols={22}
+        />
       </div>
 
       {/* Main Content Area */}
