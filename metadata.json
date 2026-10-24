@@ -1,0 +1,6 @@
+{
+  "name": "SMP ALAM EXCELLENTIA PAMEKASAN - Sekolah Alam & Kepemimpinan",
+  "description": "Website resmi profil digital dan pendaftaran SMP Alam Excellentia Pamekasan (Yayasan Insan Kamil). Belajar dari alam, bertumbuh menjadi pemimpin masa depan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
