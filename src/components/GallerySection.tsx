@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Camera, MapPin, X, ZoomIn, Play, Video, Image as ImageIcon } from 'lucide-react';
 import { GALLERY_ITEMS, GalleryItemExtended } from '../data/schoolData';
+import HoloCard from './HoloCard';
 
 type FilterType = 'all' | 'photo' | 'video' | 'outbound' | 'sains' | 'pertanian';
 
@@ -163,13 +164,23 @@ export const GallerySection: React.FC = () => {
                 />
               </div>
             ) : (
-              <div className="aspect-[16/9] sm:aspect-[16/10] bg-black">
-                <img
-                  src={activeItem.image}
+              <div className="p-4 sm:p-8 bg-slate-950 flex flex-col items-center justify-center min-h-[360px]">
+                <HoloCard
+                  image={activeItem.image}
                   alt={activeItem.title}
-                  className="w-full h-full object-contain"
-                  referrerPolicy="no-referrer"
+                  preset="cosmos"
+                  foilColor="#38bdf8"
+                  width={520}
+                  radius={16}
+                  intensity={0.85}
+                  glare={0.6}
+                  edgeSparkle={0.85}
+                  tiltMax={14}
+                  className="w-full max-w-[500px]"
                 />
+                <p className="mt-3 text-[11px] text-slate-400 italic">
+                  Gerakkan kursor atau sentuh kartu foto untuk efek kilau holografik 3D
+                </p>
               </div>
             )}
 

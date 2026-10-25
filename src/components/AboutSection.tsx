@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Compass, ShieldCheck, Sprout, ArrowRight, CheckCircle2, BookOpen } from 'lucide-react';
+import { Compass, ShieldCheck, Sprout, ArrowRight, CheckCircle2, BookOpen, Sparkles } from 'lucide-react';
 import { ABOUT_IMAGE, THREE_ADVANTAGES, SCHOOL_INFO } from '../data/schoolData';
 import { TourModal } from './TourModal';
+import HoloCard from './HoloCard';
 
 interface AboutSectionProps {
   onOpenRegister: () => void;
@@ -21,7 +22,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenRegister }) =>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <div className="flex items-center gap-2 text-xs font-bold tracking-wider text-emerald-800 uppercase mb-3">
+          <div className="flex items-center gap-2 text-xs font-bold tracking-wider text-blue-700 uppercase mb-3">
             <span>Tentang Sekolah Kami</span>
             <span className="text-stone-300">·</span>
             <span className="text-stone-500 font-normal">Yayasan Insan Kamil Pamekasan</span>
@@ -36,22 +37,37 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenRegister }) =>
 
         {/* 2-Column Balanced Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
-          {/* Left Column: Visual Photography Frame */}
-          <div className="lg:col-span-6 flex flex-col">
-            <div className="relative rounded-2xl overflow-hidden border border-stone-200 shadow-sm flex-1 min-h-[380px] sm:min-h-[440px] bg-stone-100 group">
-              <img
-                src={ABOUT_IMAGE}
+          {/* Left Column: Interactive HoloCard Photography */}
+          <div className="lg:col-span-6 flex flex-col items-center justify-center">
+            <div className="w-full flex justify-center py-2">
+              <HoloCard
+                image={ABOUT_IMAGE}
                 alt="Suasana kelas alam di saung kayu SMP Alam Excellentia Pamekasan"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
-                referrerPolicy="no-referrer"
+                preset="gold"
+                foilColor="#f59e0b"
+                width={440}
+                radius={20}
+                intensity={0.8}
+                glare={0.6}
+                edgeSparkle={0.85}
+                tiltMax={14}
+                hoverScale={1.03}
+                idle={true}
+                shadow={true}
+                className="w-full max-w-[440px]"
               />
-              {/* Subtle Natural Overlay Caption */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/85 via-forest-950/40 to-transparent p-6 text-white">
-                <p className="text-xs font-semibold tracking-wider text-amber-300 uppercase">
-                  Lingkungan Belajar Terbuka
+            </div>
+            {/* Elegant Caption Card */}
+            <div className="w-full max-w-[440px] mt-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 shadow-xs flex items-start gap-3">
+              <div className="p-2 rounded-xl bg-orange-100/80 border border-orange-200 text-orange-600 shrink-0">
+                <Sparkles className="w-4 h-4" />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-slate-900 uppercase tracking-wider">
+                  Lingkungan Belajar Terbuka &amp; Alami
                 </p>
-                <p className="text-sm font-medium text-stone-100 mt-1 leading-snug">
-                  Belajar tanpa sekat tembok kaku, mengasah nalar kritis dan interaksi langsung dengan ciptaan Allah SWT.
+                <p className="text-xs text-slate-600 mt-0.5 leading-relaxed">
+                  Belajar tanpa sekat tembok kaku, mengasah nalar kritis dan interaksi langsung dengan ciptaan Allah SWT. <span className="text-orange-600 font-medium">(Gerakkan kursor / sentuh kartu untuk efek kilau holografik 3D)</span>.
                 </p>
               </div>
             </div>
