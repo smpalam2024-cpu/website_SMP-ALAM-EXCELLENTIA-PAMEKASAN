@@ -9,6 +9,7 @@ import { AdminBar } from './components/AdminBar';
 import { Navbar } from './components/Navbar';
 import { InstitutionalBanner } from './components/OfficialLogos';
 import { Hero } from './components/Hero';
+import { ProblemAgitationSection } from './components/ProblemAgitationSection';
 import { VisionMissionSection } from './components/VisionMissionSection';
 import { AboutSection } from './components/AboutSection';
 import { FourPillarsSection } from './components/FourPillarsSection';
@@ -74,6 +75,11 @@ function AppContent() {
         <InstitutionalBanner
           key={logoUpdateCounter}
           onOpenManager={() => setLogoManagerOpen(true)}
+        />
+
+        {/* Section: Problem / Agitation (Tantangan Generasi Hari Ini & SplashCursor Fluid Art) */}
+        <ProblemAgitationSection
+          onOpenRegister={() => setPaymentProofModalOpen(true)}
         />
 
         {/* Section 2: Beranda Awal VISI & 5 MISI, TAGLINE, and PENGALAMAN ADALAH GURU TERBAIK */}
