@@ -34,11 +34,11 @@ export const ContactSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <div className="flex items-center gap-2 text-xs font-bold tracking-wider text-emerald-800 uppercase mb-3">
-            <MessageSquare className="w-4 h-4 text-emerald-700" />
+          <div className="flex items-center gap-2 text-xs font-bold tracking-wider text-blue-700 uppercase mb-3">
+            <MessageSquare className="w-4 h-4 text-blue-600" />
             <span>Hubungi Kami</span>
-            <span className="text-stone-300">·</span>
-            <span className="text-stone-500 font-normal">Pamekasan, Madura</span>
+            <span className="text-slate-300">·</span>
+            <span className="text-slate-500 font-normal">Pademawu, Pamekasan</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-stone-900 font-display tracking-tight leading-tight">
             Kunjungi Kampus & Konsultasi
@@ -55,7 +55,7 @@ export const ContactSection: React.FC = () => {
               {/* Address Card */}
               <div className="p-5 sm:p-6 rounded-2xl border border-stone-200 bg-white shadow-xs">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-emerald-50 text-emerald-700 shrink-0">
+                  <div className="p-3 rounded-xl bg-blue-50 text-blue-700 shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -68,8 +68,8 @@ export const ContactSection: React.FC = () => {
                     <p className="text-xs text-stone-500 mt-0.5 leading-relaxed">
                       {SCHOOL_INFO.address}
                     </p>
-                    <p className="text-xs font-semibold text-emerald-800 mt-2">
-                      {SCHOOL_INFO.foundation}
+                    <p className="text-xs font-semibold text-blue-700 mt-2">
+                      Yayasan Insan Kamil · JSAN Nusantara
                     </p>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ export const ContactSection: React.FC = () => {
                       href={`https://wa.me/62${cleanWa}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-900 mt-2"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-green-700 hover:text-green-900 mt-2"
                     >
                       Chat WhatsApp Resmi ({settings.consultationWhatsapp}) →
                     </a>

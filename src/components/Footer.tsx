@@ -42,25 +42,25 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLogoManager, onOpenRegiste
               </div>
             </div>
 
-            <p className="text-xs sm:text-sm text-stone-300 leading-relaxed max-w-sm">
-              Lembaga pendidikan Islam berbasis alam dan pengalaman nyata di bawah naungan Yayasan Insan Kamil Pamekasan. Membentuk generasi berakhlak mulia, cerdas berpikir, mandiri, dan bertanggung jawab.
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-sm">
+              Lembaga pendidikan Islam berbasis alam dan pengalaman nyata di bawah naungan Yayasan Insan Kamil Pamekasan – anggota JSAN (Jaringan Sekolah Alam Nusantara). Membentuk generasi berakhlak mulia, cerdas berpikir, mandiri, dan bertanggung jawab.
             </p>
 
             {/* The 3 Official Institutional Badges */}
             <div className="pt-2 flex items-center gap-3">
-              <div className="p-1 rounded-lg bg-emerald-900/40 border border-emerald-800/80" title="SMP Alam Excellentia Pamekasan">
+              <div className="p-1 rounded-lg bg-blue-900/40 border border-blue-800/80" title="SMP Alam Excellentia Pamekasan">
                 <OfficialSchoolLogo customSrc={logos.schoolLogo} className="w-8 h-8" />
               </div>
-              <div className="p-1 rounded-lg bg-sky-950/40 border border-sky-800/80" title="Yayasan Insan Kamil Pamekasan">
+              <div className="p-1 rounded-lg bg-blue-950/40 border border-blue-800/80" title="Yayasan Insan Kamil">
                 <FoundationLogo customSrc={logos.foundationLogo} className="w-8 h-8" />
               </div>
-              <div className="p-1 rounded-lg bg-emerald-950/40 border border-emerald-700/80" title="Sekolah Alam Indonesia">
+              <div className="p-1 rounded-lg bg-green-950/40 border border-green-700/80" title="JSAN – Jaringan Sekolah Alam Nusantara">
                 <NatureSchoolNetworkLogo customSrc={logos.networkLogo} className="w-8 h-8" />
               </div>
               {onOpenLogoManager && (
                 <button
                   onClick={onOpenLogoManager}
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold text-amber-300 bg-amber-400/10 hover:bg-amber-400/20 border border-amber-400/30 rounded-md transition-colors"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold text-orange-300 bg-orange-400/10 hover:bg-orange-400/20 border border-orange-400/30 rounded-md transition-colors"
                 >
                   <Upload className="w-3 h-3" />
                   <span>Unggah Logo</span>
@@ -71,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLogoManager, onOpenRegiste
 
           {/* Col 2: Navigation Links */}
           <div className="md:col-span-3 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-green-400">
               Navigasi Halaman
             </h4>
             <ul className="space-y-2 text-xs text-stone-300">
@@ -122,7 +122,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLogoManager, onOpenRegiste
             <div className="pt-2">
               <button
                 onClick={onOpenRegister}
-                className="w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 text-xs font-bold text-forest-950 bg-amber-400 hover:bg-amber-300 rounded-lg shadow-sm transition-colors uppercase tracking-wider"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 text-xs font-bold text-white bg-orange-500 hover:bg-orange-400 rounded-lg shadow-sm transition-colors uppercase tracking-wider"
               >
                 DAFTAR SISWA BARU (PPDB)
               </button>

@@ -10,6 +10,16 @@ export interface Pillar {
   highlight: string;
 }
 
+export interface PillarProgram {
+  id: string;
+  name: string;
+  description: string;
+}
+
+export interface PillarWithPrograms extends Pillar {
+  programs: PillarProgram[];
+}
+
 export interface Program {
   id: string;
   title: string;
@@ -28,6 +38,12 @@ export interface GalleryItem {
   image: string;
   caption: string;
   location: string;
+}
+
+export interface GalleryItemExtended extends GalleryItem {
+  type: 'photo' | 'video';
+  videoUrl?: string;
+  thumbnail?: string;
 }
 
 export interface RegistrationFormData {

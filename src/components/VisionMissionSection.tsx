@@ -24,9 +24,9 @@ export const VisionMissionSection: React.FC = () => {
   return (
     <section id="visi-misi" className="py-20 sm:py-24 bg-gradient-to-b from-stone-50 via-white to-stone-50 border-b border-stone-200 relative overflow-hidden">
       {/* Decorative Natural Background Accents */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100/40 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-100/30 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-sky-50/50 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-100/30 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-green-50/50 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -46,12 +46,12 @@ export const VisionMissionSection: React.FC = () => {
               Falsafah Pendidikan Sekolah Alam
             </p>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black font-display tracking-tight leading-snug">
-              <span className="text-emerald-700">{settings.quoteFirst || 'PENG'}</span>
-              <span className="text-amber-500 font-extrabold underline decoration-amber-400 decoration-wavy decoration-2">
+              <span className="text-blue-700">{settings.quoteFirst || 'PENG'}</span>
+              <span className="text-orange-500 font-extrabold underline decoration-orange-400 decoration-wavy decoration-2">
                 {settings.quoteHighlight1 || 'ALAM'}
               </span>
-              <span className="text-emerald-700">{settings.quoteMiddle || 'AN ADALAH '}</span>
-              <span className="text-amber-500 font-extrabold">
+              <span className="text-blue-700">{settings.quoteMiddle || 'AN ADALAH '}</span>
+              <span className="text-orange-500 font-extrabold">
                 {settings.quoteHighlight2 || 'GURU TERBAIK'}
               </span>
             </h2>
@@ -66,7 +66,7 @@ export const VisionMissionSection: React.FC = () => {
                 setActiveAdminTab('settings');
                 setOpenAdminDashboard(true);
               }}
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 bg-emerald-100/70 hover:bg-emerald-200/80 px-3 py-1 rounded-md transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-800 bg-blue-100/70 hover:bg-blue-200/80 px-3 py-1 rounded-md transition-colors"
             >
               <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
               <span>Edit Visi, Misi & Tagline di Dasbor Admin</span>
@@ -79,7 +79,7 @@ export const VisionMissionSection: React.FC = () => {
           
           {/* Left: VISI Heroic Card */}
           <div className="lg:col-span-5 flex flex-col">
-            <div className="relative rounded-3xl bg-gradient-to-br from-forest-950 via-emerald-900 to-forest-900 text-white p-8 sm:p-10 shadow-xl border border-emerald-800/40 flex-1 flex flex-col justify-between overflow-hidden group">
+            <div className="relative rounded-3xl bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white p-8 sm:p-10 shadow-xl border border-blue-800/40 flex-1 flex flex-col justify-between overflow-hidden group">
               {/* Radial Glow */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-radial-[at_top_right] from-amber-400/25 via-sky-400/10 to-transparent pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />

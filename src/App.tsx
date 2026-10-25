@@ -53,7 +53,7 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-900 font-sans selection:bg-emerald-800 selection:text-white antialiased flex flex-col">
+    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-orange-500 selection:text-white antialiased flex flex-col">
       {/* Admin Quick Action Strip (only visible when logged in as admin) */}
       <AdminBar />
 
