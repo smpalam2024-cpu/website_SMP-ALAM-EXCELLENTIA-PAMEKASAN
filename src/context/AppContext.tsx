@@ -132,9 +132,22 @@ interface AppContextType {
   setActiveAdminTab: (tab: string) => void;
 }
 
+const APP_DATA_VERSION = 'v2_excellentia_redesign';
+
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // Reset stale localStorage from previous version so changes immediately show on visitor devices
+  if (typeof window !== 'undefined') {
+    const storedVer = localStorage.getItem('smp_alam_data_version');
+    if (storedVer !== APP_DATA_VERSION) {
+      localStorage.removeItem('smp_alam_settings');
+      localStorage.removeItem('smp_alam_teachers');
+      localStorage.removeItem('smp_alam_current_user');
+      localStorage.setItem('smp_alam_data_version', APP_DATA_VERSION);
+    }
+  }
+
   const [currentUser, setCurrentUser] = useState<User | null>(() => {
     const saved = localStorage.getItem('smp_alam_current_user');
     return saved ? JSON.parse(saved) : { role: 'guest', name: 'Tamu Pengunjung' };
