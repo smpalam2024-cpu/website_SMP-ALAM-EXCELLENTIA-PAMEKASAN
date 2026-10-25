@@ -1,6 +1,6 @@
 import React from 'react';
 import { Phone, ArrowRight, Target, MapPin } from 'lucide-react';
-import { HERO_IMAGE, SCHOOL_INFO } from '../data/schoolData';
+import { SCHOOL_INFO } from '../data/schoolData';
 import { useApp } from '../context/AppContext';
 import { HexagonalVault } from './HexagonalVault';
 
@@ -18,18 +18,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onExplore }) => {
   };
 
   return (
-    <section id="hero" className="relative min-h-[94vh] flex flex-col justify-end text-white overflow-hidden pt-28 pb-12 sm:pb-16">
-      {/* Background Photography */}
+    <section id="hero" className="relative min-h-[90vh] flex flex-col justify-end text-white overflow-hidden pt-28 pb-12 sm:pb-16 bg-gradient-to-b from-blue-950 via-blue-900 to-blue-950">
+      {/* Background Gradients & Dynamic Interactive Hexagonal Vault */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={HERO_IMAGE}
-          alt="Siswa SMP Alam Excellentia Pamekasan belajar aktif di alam terbuka"
-          className="w-full h-full object-cover object-center"
-          referrerPolicy="no-referrer"
-        />
-        {/* Blue-tinted dark overlay for brand consistency */}
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-950/90 via-blue-900/60 to-blue-950/95" />
-        <div className="absolute inset-0 bg-radial-[at_top_right] from-orange-500/15 via-sky-500/10 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-950/95 via-blue-900/85 to-blue-950/98" />
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/3 -left-24 w-96 h-96 bg-sky-500/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-24 right-1/4 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none" />
         <HexagonalVault
           className="absolute inset-0 w-full h-full"
           hexColor="rgba(74, 222, 128, 0.15)"
@@ -46,14 +41,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onExplore }) => {
 
           {/* Badges */}
           <div className="flex flex-wrap items-center gap-3 mb-5">
-            <div className="w-11 h-11 rounded-2xl bg-white/95 p-1 shadow-md border border-white/20 shrink-0">
-              <img
-                src={settings.schoolLogo || '/logo-sekolah.png'}
-                alt="Logo SMP Alam Excellentia"
-                className="w-full h-full object-contain rounded-xl"
-              />
-            </div>
-            <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-orange-500/20 backdrop-blur-md border border-orange-400/30 text-xs font-bold text-orange-300 uppercase tracking-wider">
+            <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-orange-500/20 backdrop-blur-md border border-orange-400/30 text-xs font-bold text-orange-300 uppercase tracking-wider shadow-sm">
               <span className="w-2 h-2 rounded-full bg-orange-400 animate-ping" />
               <span>{settings.tagline}</span>
             </div>
