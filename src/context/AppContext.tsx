@@ -218,8 +218,15 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   }, [notifications]);
 
   const loginAsAdmin = (username: string, pass: string): boolean => {
-    if (username === 'admin' && pass === 'smpalam2024') {
-      const user: User = { role: 'admin', username, name: 'Admin SMP Alam' };
+    const cleanUser = username.trim().toLowerCase();
+    const cleanPass = pass.trim();
+    if (
+      (cleanUser === 'smpalam' && cleanPass === 'alam123') ||
+      (cleanUser === 'admin' && cleanPass === 'alam123') ||
+      (cleanUser === 'admin' && cleanPass === 'admin123') ||
+      (cleanUser === 'smpalam' && cleanPass === 'smpalam2024')
+    ) {
+      const user: User = { role: 'admin', username: 'smpalam', name: 'Admin SMP Alam' };
       setCurrentUser(user);
       return true;
     }

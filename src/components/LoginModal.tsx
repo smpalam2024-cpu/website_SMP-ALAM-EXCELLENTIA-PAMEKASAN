@@ -11,8 +11,8 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
   const { loginAsAdmin, loginAsGuest, setOpenAdminDashboard } = useApp();
 
   const [activeTab, setActiveTab] = useState<'admin' | 'guest'>('admin');
-  const [username, setUsername] = useState('admin');
-  const [password, setPassword] = useState('admin123');
+  const [username, setUsername] = useState('smpalam');
+  const [password, setPassword] = useState('alam123');
   const [showPassword, setShowPassword] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
@@ -31,7 +31,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
         setOpenAdminDashboard(true);
       }, 700);
     } else {
-      setErrorMsg('Username/Email atau Password salah. Gunakan username: admin dan password: admin123');
+      setErrorMsg('Username atau Password salah. Gunakan username: smpalam dan password: alam123');
     }
   };
 
@@ -41,8 +41,8 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
   };
 
   const fillDefaultCredentials = () => {
-    setUsername('admin');
-    setPassword('admin123');
+    setUsername('smpalam');
+    setPassword('alam123');
     setErrorMsg('');
   };
 
@@ -123,7 +123,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                     <span>Akun Resmi Admin Utama:</span>
                   </p>
                   <p className="mt-1 font-mono text-[11px] text-amber-900">
-                    Username: <strong className="text-amber-950">admin</strong> · Password: <strong className="text-amber-950">admin123</strong>
+                    Username: <strong className="text-amber-950">smpalam</strong> · Password: <strong className="text-amber-950">alam123</strong>
                   </p>
                   <p className="mt-0.5 text-[10px] text-amber-800">
                     Akun ini memiliki hak akses penuh untuk mengedit perkembangan website, data guru, nomor WA, dan PPDB.
@@ -156,7 +156,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
             <form onSubmit={handleAdminSubmit} className="space-y-4 text-xs sm:text-sm">
               <div>
                 <label className="block font-semibold text-stone-700 mb-1">
-                  Username atau Email Admin *
+                  Username Admin *
                 </label>
                 <div className="relative">
                   <User className="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
@@ -165,8 +165,8 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                     required
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
-                    placeholder="Masukkan admin atau email"
-                    className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 outline-none"
+                    placeholder="Masukkan username (smpalam)"
+                    className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 outline-none"
                   />
                 </div>
               </div>
@@ -182,8 +182,8 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Masukkan password admin"
-                    className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-stone-300 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 outline-none font-mono"
+                    placeholder="Masukkan password (alam123)"
+                    className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-stone-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 outline-none font-mono"
                   />
                   <button
                     type="button"
@@ -198,7 +198,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold shadow-md transition-all flex items-center justify-center gap-2 uppercase tracking-wider text-xs sm:text-sm"
+                  className="w-full py-3 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-bold shadow-md transition-all flex items-center justify-center gap-2 uppercase tracking-wider text-xs sm:text-sm"
                 >
                   <LogIn className="w-4 h-4" />
                   <span>MASUK SEBAGAI ADMIN UTAMA</span>
